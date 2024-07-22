@@ -1,6 +1,6 @@
 package net.hero61.projectspartan.client.renderer;
 
-import net.hero61.projectspartan.client.model.item.model.armor.ModelBuccaneer;
+import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.hero61.projectspartan.item.armor.SpartanArmorItem;
 import net.minecraft.client.Minecraft;
@@ -22,8 +22,11 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
                 .setArmorModel(new ModelBuccaneer<>(modelSet.bakeLayer(ModelBuccaneer.LAYER_LOCATION)))
                 .setArmorTexture("textures/models/armor/buccaneer.png");*/
 
-        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER, "textures/models/armor/buccaneer/buccaneer.png");
-        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_GREEN, "textures/models/armor/buccaneer/buccaneer_green.json.png");
+        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY, "textures/models/armor/buccaneer/buccaneer.png");
+        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_HELMET, "textures/models/armor/buccaneer/buccaneer.png");
+        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
+        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_HELMET_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
+
 }
         private void setBuccaneerRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
             ((SpartanArmorItem) item.get())

@@ -2,6 +2,7 @@ package net.hero61.projectspartan;
 
 import com.mojang.logging.LogUtils;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -38,7 +39,10 @@ public class ProjectSpartan {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ProjectSpartanItems.BUCCANEER);
+            event.accept(ProjectSpartanItems.BUCCANEER_GREEN);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
