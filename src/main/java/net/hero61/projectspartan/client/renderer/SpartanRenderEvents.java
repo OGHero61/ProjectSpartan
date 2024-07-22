@@ -2,6 +2,7 @@ package net.hero61.projectspartan.client.renderer;
 
 import net.hero61.projectspartan.ProjectSpartan;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
+import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneerHelmet;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
@@ -25,6 +26,7 @@ public class SpartanRenderEvents {
     public static void layerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 
         event.registerLayerDefinition(ModelBuccaneer.LAYER_LOCATION, ModelBuccaneer::createLayer);
+        event.registerLayerDefinition(ModelBuccaneerHelmet.LAYER_LOCATION, ModelBuccaneerHelmet::createLayer);
 
     }
     @SubscribeEvent

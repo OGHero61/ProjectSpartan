@@ -40,8 +40,10 @@ public class ProjectSpartan {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.COMBAT){
-            event.accept(ProjectSpartanItems.BUCCANEER);
-            event.accept(ProjectSpartanItems.BUCCANEER_GREEN);
+            event.accept(ProjectSpartanItems.BUCCANEER_BODY);
+            event.accept(ProjectSpartanItems.BUCCANEER_HELMET);
+            event.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN);
+            event.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN);
         }
     }
 

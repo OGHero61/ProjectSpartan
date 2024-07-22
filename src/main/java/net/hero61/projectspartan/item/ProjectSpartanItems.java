@@ -16,16 +16,20 @@ public class ProjectSpartanItems {
     /*public static final RegistryObject<Item> BUCCANEER = ITEMS.register("buccaneer",
             () -> new SpartanArmorItem(SpartanArmorMaterial.MJOLNIR, ArmorItem.Type.HELMET, new Item.Properties()));*/
 
-    private static RegistryObject<Item> createHeadband(String itemName) {
+    private static RegistryObject<Item> createBuccaneerBody(String itemName) {
+        return ITEMS.register(itemName, ()
+                -> new SpartanArmorItem(SpartanArmorMaterial.MJOLNIR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    }
+
+    public static final RegistryObject<Item> BUCCANEER_BODY = createBuccaneerBody("buccaneer_body");
+    public static final RegistryObject<Item> BUCCANEER_BODY_GREEN = createBuccaneerBody("buccaneer_green_body");
+
+    private static RegistryObject<Item> createBuccaneerHelmet(String itemName) {
         return ITEMS.register(itemName, ()
                 -> new SpartanArmorItem(SpartanArmorMaterial.MJOLNIR, ArmorItem.Type.HELMET, new Item.Properties()));
     }
-
-    public static final RegistryObject<Item> BUCCANEER_BODY = createHeadband("buccaneer");
-    public static final RegistryObject<Item> BUCCANEER_HELMET = createHeadband("buccaneer_helmet");
-    public static final RegistryObject<Item> BUCCANEER_BODY_GREEN = createHeadband("buccaneer_green_body");
-    public static final RegistryObject<Item> BUCCANEER_HELMET_GREEN = createHeadband("buccaneer_green_helmet");
-
+    public static final RegistryObject<Item> BUCCANEER_HELMET_GREEN = createBuccaneerHelmet("buccaneer_green_helmet");
+    public static final RegistryObject<Item> BUCCANEER_HELMET = createBuccaneerHelmet("buccaneer_helmet");
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

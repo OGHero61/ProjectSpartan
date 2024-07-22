@@ -20,12 +20,12 @@ import java.util.function.Supplier;
 
 public enum SpartanArmorMaterial implements ArmorMaterial {
 
-    MJOLNIR("anbu", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
-        type.put(ArmorItem.Type.BOOTS, 2);
-        type.put(ArmorItem.Type.LEGGINGS, 5);
-        type.put(ArmorItem.Type.CHESTPLATE, 7);
-        type.put(ArmorItem.Type.HELMET, 2);
-    }), 8, SoundEvents.ARMOR_EQUIP_IRON, 2.1F, 0.0F, () -> {
+    MJOLNIR("mjolnir", 35, Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
+        type.put(ArmorItem.Type.BOOTS, 8);
+        type.put(ArmorItem.Type.LEGGINGS, 8);
+        type.put(ArmorItem.Type.CHESTPLATE, 8);
+        type.put(ArmorItem.Type.HELMET, 8);
+    }), 0, SoundEvents.ARMOR_EQUIP_IRON, 5.2F, 0.0F, () -> {
         return null;//Ingredient.of(Items.LEATHER);
     })
     ;
