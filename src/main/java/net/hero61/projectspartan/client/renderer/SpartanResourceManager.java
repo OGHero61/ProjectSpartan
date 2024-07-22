@@ -23,7 +23,7 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
                 .setArmorTexture("textures/models/armor/buccaneer.png");*/
 
         setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER, "textures/models/armor/buccaneer/buccaneer.png");
-        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
+        setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_GREEN, "textures/models/armor/buccaneer/buccaneer_green.json.png");
 }
         private void setBuccaneerRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
             ((SpartanArmorItem) item.get())
