@@ -39,5 +39,4 @@ public class SpartanRenderEvents {
     public static void entityLayers(EntityRenderersEvent.AddLayers event) {
         LivingEntityRenderer<Player, ? extends EntityModel<Player>> renderer = event.getRenderer(EntityType.PLAYER);
     }
-
 }

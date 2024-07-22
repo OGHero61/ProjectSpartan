@@ -59,21 +59,4 @@ public class SpartanArmorItem extends ArmorItem {
             }
         });
     }
-
-    public int getColor(ItemStack stack) {
-        CompoundTag compoundtag = stack.getTagElement("display");
-        return compoundtag != null && compoundtag.contains("color", Tag.TAG_INT) ? compoundtag.getInt("color") : 0xFFFFFF;
-    }
-
-    public static void setColor(ItemStack stack, int color) {
-        CompoundTag compoundtag = stack.getOrCreateTagElement("display");
-        compoundtag.putInt("color", color);
-    }
-
-    public static void removeColor(ItemStack stack) {
-        CompoundTag compoundtag = stack.getTagElement("display");
-        if (compoundtag != null && compoundtag.contains("color")) {
-            compoundtag.remove("color");
-        }
-    }
 }
