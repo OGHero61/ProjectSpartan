@@ -38,6 +38,8 @@ public class ProjectSpartan {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ProjectSpartanItems.BUCCANEER_HELMET.get());
             event.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
+            event.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());
+            event.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
         }
     }
 
