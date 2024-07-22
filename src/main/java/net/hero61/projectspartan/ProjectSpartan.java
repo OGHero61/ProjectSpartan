@@ -1,6 +1,8 @@
 package net.hero61.projectspartan;
 
 import com.mojang.logging.LogUtils;
+import net.hero61.projectspartan.client.SpartanClientSetup;
+import net.hero61.projectspartan.event.ArmorDyeHandler;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,40 +27,36 @@ public class ProjectSpartan {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(SpartanClientSetup::onClientSetup);
 
         ProjectSpartanItems.register(modEventBus);
 
-        modEventBus.addListener(this::addCreative);
-
+        MinecraftForge.EVENT_BUS.register(ArmorDyeHandler.class);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        // Common setup logic
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.COMBAT){
-            event.accept(ProjectSpartanItems.BUCCANEER_BODY);
-            event.accept(ProjectSpartanItems.BUCCANEER_HELMET);
-            event.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN);
-            event.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN);
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ProjectSpartanItems.BUCCANEER_HELMET.get());
+            event.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
         }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
+        // Server starting logic
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = ProjectSpartan.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            SpartanClientSetup.onClientSetup(event);
         }
     }
 }
