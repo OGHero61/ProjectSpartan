@@ -1,6 +1,7 @@
 package net.hero61.projectspartan;
 
 import com.mojang.logging.LogUtils;
+import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,8 +25,11 @@ public class ProjectSpartan {
 
         modEventBus.addListener(this::commonSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        ProjectSpartanItems.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
+
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
