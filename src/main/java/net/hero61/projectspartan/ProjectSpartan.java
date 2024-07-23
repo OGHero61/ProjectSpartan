@@ -40,6 +40,8 @@ public class ProjectSpartan {
             event.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
             event.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());
             event.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
+            event.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
+            event.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
         }
     }
 

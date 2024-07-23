@@ -1,5 +1,7 @@
 package net.hero61.projectspartan.client.renderer;
 
+import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssault;
+import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssaultHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneerHelmet;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
@@ -28,6 +30,8 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
         setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
         setBuccaneerHelmetRenderer(modelSet, ProjectSpartanItems.BUCCANEER_HELMET_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
 
+        setAAssaultRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_BODY, "textures/models/armor/airassault/airassault.png");
+        setAAssaultHelmetRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_HELMET, "textures/models/armor/airassault/airassault.png");
 
 }
         private void setBuccaneerRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
@@ -40,5 +44,14 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
                     .setArmorModel(new ModelBuccaneerHelmet<>(modelSet.bakeLayer(ModelBuccaneerHelmet.LAYER_LOCATION)))
                     .setArmorTexture(texture);
     }
-
+    private void setAAssaultRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelAirAssault<>(modelSet.bakeLayer(ModelAirAssault.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setAAssaultHelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelAirAssaultHelmet<>(modelSet.bakeLayer(ModelAirAssaultHelmet.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
 }

@@ -1,6 +1,8 @@
 package net.hero61.projectspartan.client.renderer;
 
 import net.hero61.projectspartan.ProjectSpartan;
+import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssault;
+import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssaultHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneerHelmet;
 import net.minecraft.client.model.EntityModel;
@@ -27,6 +29,8 @@ public class SpartanRenderEvents {
 
         event.registerLayerDefinition(ModelBuccaneer.LAYER_LOCATION, ModelBuccaneer::createLayer);
         event.registerLayerDefinition(ModelBuccaneerHelmet.LAYER_LOCATION, ModelBuccaneerHelmet::createLayer);
+        event.registerLayerDefinition(ModelAirAssault.LAYER_LOCATION, ModelAirAssault::createLayer);
+        event.registerLayerDefinition(ModelAirAssaultHelmet.LAYER_LOCATION, ModelAirAssaultHelmet::createLayer);
 
     }
     @SubscribeEvent
