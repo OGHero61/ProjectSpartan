@@ -23,8 +23,7 @@ public class ProjectSpartanItems {
     public static final RegistryObject<Item> BUCCANEER_BODY = createBody("buccaneer_body");
     public static final RegistryObject<Item> BUCCANEER_BODY_GREEN = createBody("buccaneer_green_body");
     public static final RegistryObject<Item> AIRASSAULT_BODY = createBody("airassault_body");
-
-
+    public static final RegistryObject<Item> OCEANIC_BODY = createBody("oceanic_body");
 
 
     private static RegistryObject<Item> createHelmet(String itemName) {
@@ -34,6 +33,7 @@ public class ProjectSpartanItems {
     public static final RegistryObject<Item> BUCCANEER_HELMET_GREEN = createHelmet("buccaneer_green_helmet");
     public static final RegistryObject<Item> BUCCANEER_HELMET = createHelmet("buccaneer_helmet");
     public static final RegistryObject<Item> AIRASSAULT_HELMET = createHelmet("airassault_helmet");
+    public static final RegistryObject<Item> OCEANIC_HELMET = createHelmet("oceanic_helmet");
 
 
 

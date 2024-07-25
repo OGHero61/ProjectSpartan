@@ -1,6 +1,8 @@
 package net.hero61.projectspartan.client.renderer;
 
 import net.hero61.projectspartan.ProjectSpartan;
+import net.hero61.projectspartan.client.model.item.model.armor.Oceanic.ModelOceanic;
+import net.hero61.projectspartan.client.model.item.model.armor.Oceanic.ModelOceanicHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssault;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssaultHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
@@ -26,11 +28,12 @@ public class SpartanRenderEvents {
     }
     @SubscribeEvent
     public static void layerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-
         event.registerLayerDefinition(ModelBuccaneer.LAYER_LOCATION, ModelBuccaneer::createLayer);
         event.registerLayerDefinition(ModelBuccaneerHelmet.LAYER_LOCATION, ModelBuccaneerHelmet::createLayer);
         event.registerLayerDefinition(ModelAirAssault.LAYER_LOCATION, ModelAirAssault::createLayer);
         event.registerLayerDefinition(ModelAirAssaultHelmet.LAYER_LOCATION, ModelAirAssaultHelmet::createLayer);
+        event.registerLayerDefinition(ModelOceanic.LAYER_LOCATION, ModelOceanic::createLayer);
+        event.registerLayerDefinition(ModelOceanicHelmet.LAYER_LOCATION, ModelOceanicHelmet::createLayer);
 
     }
     @SubscribeEvent

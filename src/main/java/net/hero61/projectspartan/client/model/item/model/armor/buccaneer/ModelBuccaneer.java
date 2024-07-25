@@ -462,14 +462,18 @@ public class ModelBuccaneer<T extends LivingEntity> extends HumanoidModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack matrixStack, VertexConsumer vertexConsumer, int p_225598_3_, int p_225598_4_, float p_225598_5_, float p_225598_6_, float p_225598_7_, float p_225598_8_) {
+	public void renderToBuffer(PoseStack matrixStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+		// Ensure all parts of the model are visible
 		this.leftLeg.visible = true;
 		this.rightArm.visible = true;
 		this.rightLeg.visible = true;
-		this.leftArm.visible =true;
+		this.leftArm.visible = true;
 		this.head.visible = true;
 		this.body.visible = true;
-		super.renderToBuffer(matrixStack, vertexConsumer, p_225598_3_, p_225598_4_, p_225598_5_, p_225598_6_, p_225598_7_, p_225598_8_);
+
+		// Call the superclass method to handle actual rendering
+		super.renderToBuffer(matrixStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
+
 
 }

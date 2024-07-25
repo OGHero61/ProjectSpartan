@@ -1,5 +1,7 @@
 package net.hero61.projectspartan.client.renderer;
 
+import net.hero61.projectspartan.client.model.item.model.armor.Oceanic.ModelOceanic;
+import net.hero61.projectspartan.client.model.item.model.armor.Oceanic.ModelOceanicHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssault;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssaultHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
@@ -33,6 +35,9 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
         setAAssaultRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_BODY, "textures/models/armor/airassault/airassault.png");
         setAAssaultHelmetRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_HELMET, "textures/models/armor/airassault/airassault.png");
 
+        setOceanicRenderer(modelSet, ProjectSpartanItems.OCEANIC_BODY, "textures/models/armor/oceanic/oceanic.png");
+        setOceanicHelmetRenderer(modelSet, ProjectSpartanItems.OCEANIC_HELMET, "textures/models/armor/oceanic/oceanic.png");
+
 }
         private void setBuccaneerRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
             ((SpartanArmorItem) item.get())
@@ -52,6 +57,16 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
     private void setAAssaultHelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
         ((SpartanArmorItem) item.get())
                 .setArmorModel(new ModelAirAssaultHelmet<>(modelSet.bakeLayer(ModelAirAssaultHelmet.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setOceanicRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelOceanic<>(modelSet.bakeLayer(ModelOceanic.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setOceanicHelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelOceanicHelmet<>(modelSet.bakeLayer(ModelOceanicHelmet.LAYER_LOCATION)))
                 .setArmorTexture(texture);
     }
 }

@@ -27,6 +27,7 @@ public class ProjectSpartan {
 
         ProjectSpartanItems.register(modEventBus);
 
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -42,6 +43,8 @@ public class ProjectSpartan {
             event.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
             event.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
             event.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
+            event.accept(ProjectSpartanItems.OCEANIC_HELMET.get());
+            event.accept(ProjectSpartanItems.OCEANIC_BODY.get());
         }
     }
 
