@@ -27,8 +27,8 @@ public class ProjectSpartan {
 
         ProjectSpartanItems.register(modEventBus);
 
-
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -55,5 +55,6 @@ public class ProjectSpartan {
 
     @Mod.EventBusSubscriber(modid = ProjectSpartan.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+
     }
 }
