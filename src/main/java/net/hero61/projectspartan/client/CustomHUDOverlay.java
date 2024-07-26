@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = ProjectSpartan.MOD_ID)
 public class CustomHUDOverlay {
-    private static final ResourceLocation BUCCANEER_HUD = new ResourceLocation(ProjectSpartan.MOD_ID, "textures/gui/buccaneer_hud.png");
+    /*private static final ResourceLocation BUCCANEER_HUD = new ResourceLocation(ProjectSpartan.MOD_ID, "textures/gui/buccaneer_hud.png");
     private static final ResourceLocation AASSAULT_HUD = new ResourceLocation(ProjectSpartan.MOD_ID, "textures/gui/aassault_hud.png");
     private static final ResourceLocation OCEANIC_HUD = new ResourceLocation(ProjectSpartan.MOD_ID, "textures/gui/oceanic_hud.png");
 
@@ -40,5 +40,5 @@ public class CustomHUDOverlay {
         int screenWidth = mc.getWindow().getGuiScaledWidth();
         int screenHeight = mc.getWindow().getGuiScaledHeight();
         guiGraphics.blit(hudTexture, 0, 0, 0, 0, screenWidth, screenHeight, screenWidth, screenHeight);
-    }
+    }*/
 }
