@@ -1,6 +1,7 @@
 package net.hero61.projectspartan;
 
 import com.mojang.logging.LogUtils;
+import net.hero61.projectspartan.client.CustomHUDOverlay;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -10,6 +11,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -46,6 +48,9 @@ public class ProjectSpartan {
             event.accept(ProjectSpartanItems.OCEANIC_HELMET.get());
             event.accept(ProjectSpartanItems.OCEANIC_BODY.get());
         }
+    }
+    public static void clientSetup(final FMLClientSetupEvent event) {
+        MinecraftForge.EVENT_BUS.register(CustomHUDOverlay.class);
     }
 
     @SubscribeEvent
