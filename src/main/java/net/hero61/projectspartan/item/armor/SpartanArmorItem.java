@@ -28,13 +28,9 @@ public class SpartanArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<MobEffectInstance>>())
                     .put(SpartanArmorMaterial.MJOLNIR,List.of(
-                            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, Integer.MAX_VALUE, 2,
+                            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, Integer.MAX_VALUE, 1,
                             true, false, false),
-                            new MobEffectInstance(MobEffects.WATER_BREATHING, Integer.MAX_VALUE, 2,
-                                    true,false, false),
-                            new MobEffectInstance(MobEffects.HEAL, Integer.MAX_VALUE, 1,
-                                    true,false, false),
-                            new MobEffectInstance(MobEffects.JUMP, Integer.MAX_VALUE, 2,
+                            new MobEffectInstance(MobEffects.JUMP, Integer.MAX_VALUE, 1,
                             true,false, false))).build();
 
     private HumanoidModel armorModel = null;
@@ -50,6 +46,9 @@ public class SpartanArmorItem extends ArmorItem {
             if(hasFullSuitOfArmorOn(player)) {
                 evaluateArmorEffects(player);
             }
+            else {
+                removeEffects(player);
+            }
         }
     }
 
@@ -62,6 +61,13 @@ public class SpartanArmorItem extends ArmorItem {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffects);
             }
         }
+    }
+    private void removeEffects(Player player) {
+        MATERIAL_TO_EFFECT_MAP.values().forEach(effects -> effects.forEach(effect -> {
+            if (player.hasEffect(effect.getEffect())) {
+                player.removeEffect(effect.getEffect());
+            }
+        }));
     }
 
     private void addStatusEffectForMaterial(Player player, ArmorMaterial mapArmorMaterial,
