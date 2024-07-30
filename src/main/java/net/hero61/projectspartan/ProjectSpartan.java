@@ -2,10 +2,17 @@ package net.hero61.projectspartan;
 
 import com.mojang.logging.LogUtils;
 import net.hero61.projectspartan.client.CustomHUDOverlay;
+import net.hero61.projectspartan.client.PlayerRenderHandler;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.hero61.projectspartan.item.SpartanTabs;
+import net.minecraft.client.model.PlayerModel;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -32,6 +39,7 @@ public class ProjectSpartan {
 
         ProjectSpartanItems.register(modEventBus);
 
+        MinecraftForge.EVENT_BUS.register(PlayerRenderHandler.class);
         MinecraftForge.EVENT_BUS.register(this);
 
     }

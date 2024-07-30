@@ -18,7 +18,7 @@ public class SpartanTabs {
                     .title(Component.translatable("mjolnir_armor_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
-                        pOutput.accept(ProjectSpartanItems.AIRASSAULT_BODY`.get());
+                        pOutput.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());
