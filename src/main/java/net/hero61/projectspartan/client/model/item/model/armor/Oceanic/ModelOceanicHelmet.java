@@ -68,9 +68,9 @@ public class ModelOceanicHelmet<T extends LivingEntity> extends HumanoidModel<T>
 
 		 head.addOrReplaceChild("helmet60", CubeListBuilder.create().texOffs(0, 310).mirror().addBox(5.1F, -1.1F, -3.69F, 1.0F, 1.0F, 7.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(-1.0F, 1.0F, 0.0F, 0.2603F, 0.0873F, -0.2618F));
 
-		 head.addOrReplaceChild("helmet19", CubeListBuilder.create().texOffs(-1, 329).mirror().addBox(-4.5F, -6.1F, 0.0F, 9.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2974F, 0.0F, 0.0F));
+		 head.addOrReplaceChild("helmet19", CubeListBuilder.create().texOffs(0, 329).mirror().addBox(-4.5F, -6.1F, 0.0F, 9.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2974F, 0.0F, 0.0F));
 
-		 head.addOrReplaceChild("helmet20", CubeListBuilder.create().texOffs(440, 326).mirror().addBox(-5.0F, -5.9F, 0.5F, 10.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 0.0F, -1.0F));
+		head.addOrReplaceChild("helmet20", CubeListBuilder.create().texOffs(440, 326).mirror().addBox(-5.0F, -5.9F, 0.5F, 10.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 0.0F, -1.0F));
 
 		 head.addOrReplaceChild("helmet54", CubeListBuilder.create().texOffs(440, 326).mirror().addBox(-5.0F, -4.9F, 0.5F, 10.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 0.0F, -1.0F));
 
@@ -100,9 +100,9 @@ public class ModelOceanicHelmet<T extends LivingEntity> extends HumanoidModel<T>
 
 		 head.addOrReplaceChild("helmet25", CubeListBuilder.create().texOffs(0, 450).mirror().addBox(-4.01F, -8.9797F, -0.4767F, 3.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2974F, 0.0F, 0.0F));
 
-		 head.addOrReplaceChild("helmet26", CubeListBuilder.create().texOffs(-2, 470).mirror().addBox(-0.98F, -8.2909F, -3.7705F, 5.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.8923F, 0.0F, 0.0F));
+		head.addOrReplaceChild("helmet26", CubeListBuilder.create().texOffs(1, 470).mirror().addBox(-0.98F, -8.2909F, -3.7705F, 5.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.8923F, 0.0F, 0.0F));
 
-		 head.addOrReplaceChild("helmet15", CubeListBuilder.create().texOffs(1, 470).mirror().addBox(-1.0F, -8.4221F, -3.9215F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.8923F, 0.0F, 0.0F));
+		head.addOrReplaceChild("helmet15", CubeListBuilder.create().texOffs(1, 470).mirror().addBox(-1.0F, -8.4221F, -3.9215F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.8923F, 0.0F, 0.0F));
 
 		 head.addOrReplaceChild("helmet27", CubeListBuilder.create().texOffs(1, 490).mirror().addBox(-4.02F, -8.2909F, -3.7705F, 4.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.8923F, 0.0F, 0.0F));
 
