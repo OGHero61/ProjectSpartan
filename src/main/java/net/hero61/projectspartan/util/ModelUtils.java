@@ -7,9 +7,7 @@ import net.minecraft.client.model.geom.builders.PartDefinition;
 
 public class ModelUtils {
 
-    /**
-     * Solve some model tomfuckery and stop mc bitching
-     */
+
     public static MeshDefinition createBlankHumanoidMesh() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
