@@ -15,7 +15,7 @@ public class SpartanTabs {
 
     public static final RegistryObject<CreativeModeTab> MJOLNIR_ARMOR_TAB = CREATIVE_MODE_TABS.register("mjolnir_armor_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ProjectSpartanItems.AIRASSAULT_HELMET.get()))
-                    .title(Component.translatable("mjolnir_armor_tab"))
+                    .title(Component.translatable("creativetab.mjolnir_armor_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
