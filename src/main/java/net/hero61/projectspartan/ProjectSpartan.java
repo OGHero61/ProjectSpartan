@@ -3,6 +3,7 @@ package net.hero61.projectspartan;
 import com.mojang.logging.LogUtils;
 import net.hero61.projectspartan.client.CustomHUDOverlay;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
+import net.hero61.projectspartan.item.SpartanTabs;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +25,8 @@ public class ProjectSpartan {
     public ProjectSpartan() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        SpartanTabs.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
@@ -38,16 +41,7 @@ public class ProjectSpartan {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ProjectSpartanItems.BUCCANEER_HELMET.get());
-            event.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
-            event.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());
-            event.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
-            event.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
-            event.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
-            event.accept(ProjectSpartanItems.OCEANIC_HELMET.get());
-            event.accept(ProjectSpartanItems.OCEANIC_BODY.get());
-        }
+
     }
     public static void clientSetup(final FMLClientSetupEvent event) {
         MinecraftForge.EVENT_BUS.register(CustomHUDOverlay.class);
