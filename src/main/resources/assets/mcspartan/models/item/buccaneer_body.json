@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mcspartan:items/buccaneer_body"
+    "layer0": "mcspartan:items/armor/buccaneer_body"
   }
 }

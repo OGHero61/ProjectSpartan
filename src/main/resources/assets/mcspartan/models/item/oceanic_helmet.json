@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mcspartan:items/oceanic_helmet"
+    "layer0": "mcspartan:items/armor/oceanic_helmet"
   }
 }
