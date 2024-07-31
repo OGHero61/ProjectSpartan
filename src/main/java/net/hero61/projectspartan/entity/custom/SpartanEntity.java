@@ -60,7 +60,7 @@ public class SpartanEntity extends TamableAnimal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ProjectSpartanEntities.SPARTAN.get().create(pLevel);
+        return null;
     }
 
     @Override

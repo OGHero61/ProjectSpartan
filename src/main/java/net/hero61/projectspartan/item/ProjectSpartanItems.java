@@ -1,10 +1,12 @@
 package net.hero61.projectspartan.item;
 
 import net.hero61.projectspartan.ProjectSpartan;
+import net.hero61.projectspartan.entity.ProjectSpartanEntities;
 import net.hero61.projectspartan.item.armor.SpartanArmorItem;
 import net.hero61.projectspartan.item.armor.SpartanArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,7 +38,9 @@ public class ProjectSpartanItems {
     public static final RegistryObject<Item> OCEANIC_HELMET = createHelmet("oceanic_helmet");
 
 
-
+    //Entity Spawn Eggs
+    public static final RegistryObject<Item> SPARTAN_SPAWN_EGG = ITEMS.register("spartan_spawn_egg",
+            () -> new ForgeSpawnEggItem(ProjectSpartanEntities.SPARTAN,0x527541,0x0f0f0f, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

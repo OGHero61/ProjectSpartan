@@ -26,6 +26,9 @@ public class SpartanTabs {
                         pOutput.accept(ProjectSpartanItems.OCEANIC_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.OCEANIC_BODY.get());
 
+                        //Entity Spawn Eggs
+                        pOutput.accept(ProjectSpartanItems.SPARTAN_SPAWN_EGG.get());
+
                     })
                     .build());
 
