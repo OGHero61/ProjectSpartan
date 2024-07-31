@@ -13,9 +13,9 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.LivingEntity;
 
-public class AirAssaultEntity<T extends LivingEntity> extends HumanoidModel<T> {
+public class AirAssaultEntityModel<T extends LivingEntity> extends HumanoidModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-    public AirAssaultEntity(ModelPart modelPart) {
+    public AirAssaultEntityModel(ModelPart modelPart) {
         super(modelPart);
     }
 

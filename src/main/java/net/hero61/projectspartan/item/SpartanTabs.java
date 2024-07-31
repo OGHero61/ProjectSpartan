@@ -28,6 +28,7 @@ public class SpartanTabs {
 
                         //Entity Spawn Eggs
                         pOutput.accept(ProjectSpartanItems.SPARTAN_SPAWN_EGG.get());
+                        pOutput.accept(ProjectSpartanItems.CUSTOM_SPAWN_EGG.get());
 
                     })
                     .build());

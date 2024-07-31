@@ -4,7 +4,9 @@ import com.mojang.logging.LogUtils;
 import net.hero61.projectspartan.client.CustomHUDOverlay;
 import net.hero61.projectspartan.client.PlayerRenderHandler;
 import net.hero61.projectspartan.entity.ProjectSpartanEntities;
-import net.hero61.projectspartan.entity.client.SpartanEntityRenderer;
+import net.hero61.projectspartan.entity.client.AirAssaultEntityRenderer;
+import net.hero61.projectspartan.entity.client.BuccaneerEntityRenderer;
+import net.hero61.projectspartan.entity.custom.BuccaneerEntity;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.hero61.projectspartan.item.SpartanTabs;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -72,7 +74,8 @@ public class ProjectSpartan {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ProjectSpartanEntities.SPARTAN.get(), SpartanEntityRenderer::new);
+            EntityRenderers.register(ProjectSpartanEntities.AIRASSAULT_ENTITY.get(), AirAssaultEntityRenderer::new);
+            EntityRenderers.register(ProjectSpartanEntities.BUCCANEER_ENTITY.get(), BuccaneerEntityRenderer::new);
         }
     }
 }

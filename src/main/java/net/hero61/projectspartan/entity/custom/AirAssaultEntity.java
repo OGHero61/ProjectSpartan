@@ -1,6 +1,6 @@
+
 package net.hero61.projectspartan.entity.custom;
 
-import net.hero61.projectspartan.entity.ProjectSpartanEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -27,10 +27,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import javax.annotation.Nullable;
 
-public class SpartanEntity extends TamableAnimal {
+public class AirAssaultEntity extends TamableAnimal {
     private boolean followingPlayer = false;
 
-    public SpartanEntity(EntityType<? extends TamableAnimal> pEntityType, Level pLevel) {
+    public AirAssaultEntity(EntityType<? extends TamableAnimal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
@@ -119,69 +119,69 @@ public class SpartanEntity extends TamableAnimal {
 }
 
 class FollowPlayerGoal extends FollowOwnerGoal {
-    private final SpartanEntity spartanEntity;
+    private final AirAssaultEntity airAssaultEntity;
 
-    public FollowPlayerGoal(SpartanEntity entity, double speed, float minDist, float maxDist, boolean teleportToLeaves) {
+    public FollowPlayerGoal(AirAssaultEntity entity, double speed, float minDist, float maxDist, boolean teleportToLeaves) {
         super(entity, speed, minDist, maxDist, teleportToLeaves);
-        this.spartanEntity = entity;
+        this.airAssaultEntity = entity;
     }
 
     @Override
     public boolean canUse() {
-        return this.spartanEntity.isFollowingPlayer() && super.canUse();
+        return this.airAssaultEntity.isFollowingPlayer() && super.canUse();
     }
 
     @Override
     public boolean canContinueToUse() {
-        return this.spartanEntity.isFollowingPlayer() && super.canContinueToUse();
+        return this.airAssaultEntity.isFollowingPlayer() && super.canContinueToUse();
     }
 }
 
 class StandStillGoal extends Goal {
-    private final SpartanEntity spartanEntity;
+    private final AirAssaultEntity airAssaultEntity;
 
-    public StandStillGoal(SpartanEntity spartanEntity) {
-        this.spartanEntity = spartanEntity;
+    public StandStillGoal(AirAssaultEntity airAssaultEntity) {
+        this.airAssaultEntity = airAssaultEntity;
     }
 
     @Override
     public boolean canUse() {
-        return !this.spartanEntity.isFollowingPlayer();
+        return !this.airAssaultEntity.isFollowingPlayer();
     }
 
     @Override
     public boolean canContinueToUse() {
-        return !this.spartanEntity.isFollowingPlayer();
+        return !this.airAssaultEntity.isFollowingPlayer();
     }
 
     @Override
     public void start() {
-        this.spartanEntity.getNavigation().stop();
+        this.airAssaultEntity.getNavigation().stop();
     }
 
     @Override
     public void tick() {
-        this.spartanEntity.getNavigation().stop();
+        this.airAssaultEntity.getNavigation().stop();
     }
 }
 
 class AttackWhenOwnerAttacksGoal extends Goal {
-    private final SpartanEntity spartanEntity;
+    private final AirAssaultEntity airAssaultEntity;
 
-    public AttackWhenOwnerAttacksGoal(SpartanEntity spartanEntity) {
-        this.spartanEntity = spartanEntity;
+    public AttackWhenOwnerAttacksGoal(AirAssaultEntity airAssaultEntity) {
+        this.airAssaultEntity = airAssaultEntity;
     }
 
     @Override
     public boolean canUse() {
-        return this.spartanEntity.isTame() && this.spartanEntity.getOwner() != null;
+        return this.airAssaultEntity.isTame() && this.airAssaultEntity.getOwner() != null;
     }
 
     @SubscribeEvent
     public void onOwnerAttack(LivingAttackEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
-            if (player.equals(this.spartanEntity.getOwner())) {
-                this.spartanEntity.setAttackTarget(event.getEntity());
+            if (player.equals(this.airAssaultEntity.getOwner())) {
+                this.airAssaultEntity.setAttackTarget(event.getEntity());
             }
         }
     }
