@@ -1,7 +1,10 @@
 package net.hero61.projectspartan.client.renderer;
 
+
 import net.hero61.projectspartan.client.model.item.model.armor.Oceanic.ModelOceanic;
 import net.hero61.projectspartan.client.model.item.model.armor.Oceanic.ModelOceanicHelmet;
+import net.hero61.projectspartan.client.model.item.model.armor.achillies.ModelAchilles;
+import net.hero61.projectspartan.client.model.item.model.armor.achillies.ModelAchillesHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssault;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssaultHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
@@ -27,13 +30,16 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
                 .setArmorModel(new ModelBuccaneer<>(modelSet.bakeLayer(ModelBuccaneer.LAYER_LOCATION)))
                 .setArmorTexture("textures/models/armor/buccaneer.png");*/
 
+        setAAssaultRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_BODY, "textures/models/armor/airassault/airassault.png");
+        setAAssaultHelmetRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_HELMET, "textures/models/armor/airassault/airassault.png");
+        setAchillesHelmetRenderer(modelSet, ProjectSpartanItems.ACHILLES_HELMET, "textures/models/armor/achilles/achilles.png");
+        setAchillesRenderer(modelSet, ProjectSpartanItems.ACHILLES_BODY, "textures/models/armor/achilles/achilles.png");
         setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY, "textures/models/armor/buccaneer/buccaneer.png");
         setBuccaneerHelmetRenderer(modelSet, ProjectSpartanItems.BUCCANEER_HELMET, "textures/models/armor/buccaneer/buccaneer.png");
         setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
         setBuccaneerHelmetRenderer(modelSet, ProjectSpartanItems.BUCCANEER_HELMET_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
 
-        setAAssaultRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_BODY, "textures/models/armor/airassault/airassault.png");
-        setAAssaultHelmetRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_HELMET, "textures/models/armor/airassault/airassault.png");
+
 
         setOceanicRenderer(modelSet, ProjectSpartanItems.OCEANIC_BODY, "textures/models/armor/oceanic/oceanic.png");
         setOceanicHelmetRenderer(modelSet, ProjectSpartanItems.OCEANIC_HELMET, "textures/models/armor/oceanic/oceanic.png");
@@ -69,4 +75,15 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
                 .setArmorModel(new ModelOceanicHelmet<>(modelSet.bakeLayer(ModelOceanicHelmet.LAYER_LOCATION)))
                 .setArmorTexture(texture);
     }
+    private void setAchillesHelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelAchillesHelmet<>(modelSet.bakeLayer(ModelAchillesHelmet.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setAchillesRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelAchilles<>(modelSet.bakeLayer(ModelAchilles.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+
 }

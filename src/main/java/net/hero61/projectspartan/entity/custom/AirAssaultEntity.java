@@ -71,7 +71,7 @@ public class AirAssaultEntity extends TamableAnimal {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.PLAYER_BREATH;
+        return null;
     }
 
     @Nullable

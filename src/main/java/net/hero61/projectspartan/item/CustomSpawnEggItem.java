@@ -42,7 +42,7 @@ public class CustomSpawnEggItem extends Item {
                 world.addFreshEntity(entity);
 
                 itemstack.shrink(1);
-                world.playSound(null, pos, SoundEvents.IRON_GOLEM_REPAIR, player.getSoundSource(), 1.0F, 1.0F);
+                //world.playSound(null, pos, SoundEvents.BEACON_ACTIVATE, player.getSoundSource(), 0F, 1.0F);
             }
         }
 

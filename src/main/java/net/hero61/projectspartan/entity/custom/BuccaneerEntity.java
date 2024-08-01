@@ -42,7 +42,7 @@ public class BuccaneerEntity extends TamableAnimal {
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3f));
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
-        this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
+        this.targetSelector.addGoal(1, new OwnerHurtTargetGoal(this));
         this.targetSelector.addGoal(3, (new HurtByTargetGoal(this)).setAlertOthers());
         this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
     }
@@ -71,7 +71,7 @@ public class BuccaneerEntity extends TamableAnimal {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.PLAYER_BREATH;
+        return null;
     }
 
     @Nullable

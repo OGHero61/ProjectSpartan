@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mcspartan:item/custom_spawn_egg"
+    "layer0": "mcspartan:item/armor/achilles_body"
   }
 }

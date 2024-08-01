@@ -7,7 +7,11 @@
   "item.mcspartan.airassault_body":"Air Assault",
   "item.mcspartan.oceanic_helmet":"Oceanic Helmet",
   "item.mcspartan.oceanic_body":"Oceanic",
+  "item.mcspartan.achilles_helmet":"Achilles Helmet",
+  "item.mcspartan.achilles_body":"Achilles",
 
+
+  "item.mcspartan.custom_spawn_egg":"Spartan",
 
   "creativetab.mjolnir_armor_tab": "Mjolnir Armor"
 }
