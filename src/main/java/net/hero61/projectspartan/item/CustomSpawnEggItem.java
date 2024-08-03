@@ -53,7 +53,9 @@ public class CustomSpawnEggItem extends Item {
         Random random = new Random();
         EntityType<?>[] entities = new EntityType<?>[]{
                 ProjectSpartanEntities.AIRASSAULT_ENTITY.get(),
-                ProjectSpartanEntities.BUCCANEER_ENTITY.get()
+                ProjectSpartanEntities.ACHILLES_ENTITY.get(),
+                ProjectSpartanEntities.BUCCANEER_ENTITY.get(),
+                ProjectSpartanEntities.OCEANIN_ENTITY.get(),
         };
 
         int index = random.nextInt(entities.length);

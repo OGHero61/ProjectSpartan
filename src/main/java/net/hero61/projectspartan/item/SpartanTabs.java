@@ -29,7 +29,7 @@ public class SpartanTabs {
                         pOutput.accept(ProjectSpartanItems.OCEANIC_BODY.get());
 
                         //Entity Spawn Eggs
-                        pOutput.accept(ProjectSpartanItems.SPARTAN_SPAWN_EGG.get());
+                        //pOutput.accept(ProjectSpartanItems.SPARTAN_SPAWN_EGG.get());
                         pOutput.accept(ProjectSpartanItems.CUSTOM_SPAWN_EGG.get());
 
                     })

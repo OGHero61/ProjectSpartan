@@ -1,17 +1,23 @@
 {
-  "item.mcspartan.buccaneer_body":"Buccaneer",
-  "item.mcspartan.buccaneer_green_body":"Buccaneer(Green)",
+  "item.mcspartan.buccaneer_body":"Buccaneer Armor",
+  "item.mcspartan.buccaneer_green_body":"Buccaneer Armor(Green)",
   "item.mcspartan.buccaneer_helmet":"Buccaneer Helmet",
   "item.mcspartan.buccaneer_green_helmet":"Buccaneer Helmet (Green)",
   "item.mcspartan.airassault_helmet":"Air Assault Helmet",
-  "item.mcspartan.airassault_body":"Air Assault",
+  "item.mcspartan.airassault_body":"Air Assault Armor",
   "item.mcspartan.oceanic_helmet":"Oceanic Helmet",
-  "item.mcspartan.oceanic_body":"Oceanic",
+  "item.mcspartan.oceanic_body":"Oceanic Armor",
   "item.mcspartan.achilles_helmet":"Achilles Helmet",
-  "item.mcspartan.achilles_body":"Achilles",
+  "item.mcspartan.achilles_body":"Achilles Armor",
 
 
-  "item.mcspartan.custom_spawn_egg":"Spartan",
+  "item.mcspartan.custom_spawn_egg":"Spartan Ally",
+
+  "entity.mcspartan.airassault_entity": "Spartan ALLY",
+  "entity.mcspartan.achilles_entity": "Spartan ALLY",
+  "entity.mcspartan.buccaneer_entity": "Spartan ALLY",
+  "entity.mcspartan.oceanic_entity": "Spartan ALLY",
+
 
   "creativetab.mjolnir_armor_tab": "Mjolnir Armor"
 }

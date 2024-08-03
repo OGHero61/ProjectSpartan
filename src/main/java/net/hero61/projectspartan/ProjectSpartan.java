@@ -4,8 +4,10 @@ import com.mojang.logging.LogUtils;
 import net.hero61.projectspartan.client.CustomHUDOverlay;
 import net.hero61.projectspartan.client.PlayerRenderHandler;
 import net.hero61.projectspartan.entity.ProjectSpartanEntities;
+import net.hero61.projectspartan.entity.client.AchillesEntityRenderer;
 import net.hero61.projectspartan.entity.client.AirAssaultEntityRenderer;
 import net.hero61.projectspartan.entity.client.BuccaneerEntityRenderer;
+import net.hero61.projectspartan.entity.client.OceanicEntityRenderer;
 import net.hero61.projectspartan.entity.custom.BuccaneerEntity;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.hero61.projectspartan.item.SpartanTabs;
@@ -75,7 +77,9 @@ public class ProjectSpartan {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ProjectSpartanEntities.AIRASSAULT_ENTITY.get(), AirAssaultEntityRenderer::new);
+            EntityRenderers.register(ProjectSpartanEntities.ACHILLES_ENTITY.get(), AchillesEntityRenderer::new);
             EntityRenderers.register(ProjectSpartanEntities.BUCCANEER_ENTITY.get(), BuccaneerEntityRenderer::new);
+            EntityRenderers.register(ProjectSpartanEntities.OCEANIN_ENTITY.get(), OceanicEntityRenderer::new);
         }
     }
 }
