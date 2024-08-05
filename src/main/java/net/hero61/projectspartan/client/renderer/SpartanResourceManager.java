@@ -14,6 +14,8 @@ import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G
 import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G1_Helmet;
 import net.hero61.projectspartan.client.model.item.model.armor.mkvi_g1.ModelMKVI_G1;
 import net.hero61.projectspartan.client.model.item.model.armor.mkvi_g1.ModelMKVI_G1_Helmet;
+import net.hero61.projectspartan.client.model.item.model.armor.odst.ModelOdstG1;
+import net.hero61.projectspartan.client.model.item.model.armor.odst.ModelOdstG1Helmet;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.hero61.projectspartan.item.armor.SpartanArmorItem;
 import net.minecraft.client.Minecraft;
@@ -51,6 +53,8 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
         registerArmorModel(modelSet, ProjectSpartanItems.BUCCANEER_HELMET_GREEN, ModelBuccaneerHelmet.LAYER_LOCATION, new ModelBuccaneerHelmet<>(modelSet.bakeLayer(ModelBuccaneerHelmet.LAYER_LOCATION)), "textures/models/armor/buccaneer/buccaneer_green.png");
         registerArmorModel(modelSet, ProjectSpartanItems.OCEANIC_BODY, ModelOceanic.LAYER_LOCATION, new ModelOceanic<>(modelSet.bakeLayer(ModelOceanic.LAYER_LOCATION)), "textures/models/armor/oceanic/oceanic.png");
         registerArmorModel(modelSet, ProjectSpartanItems.OCEANIC_HELMET, ModelOceanicHelmet.LAYER_LOCATION, new ModelOceanicHelmet<>(modelSet.bakeLayer(ModelOceanicHelmet.LAYER_LOCATION)), "textures/models/armor/oceanic/oceanic.png");
+        registerArmorModel(modelSet, ProjectSpartanItems.ODST_G1_BODY, ModelOdstG1.LAYER_LOCATION, new ModelOdstG1<>(modelSet.bakeLayer(ModelOdstG1.LAYER_LOCATION)), "textures/models/armor/odst/odstgreen.png");
+        registerArmorModel(modelSet, ProjectSpartanItems.ODST_G1_HELMET, ModelOdstG1Helmet.LAYER_LOCATION, new ModelOdstG1Helmet<>(modelSet.bakeLayer(ModelOdstG1Helmet.LAYER_LOCATION)), "textures/models/armor/odst/odstgreen.png");
     }
 
     private <T extends LivingEntity> void registerArmorModel(EntityModelSet modelSet, RegistryObject<Item> item, ModelLayerLocation layer, HumanoidModel<T> model, String texture) {

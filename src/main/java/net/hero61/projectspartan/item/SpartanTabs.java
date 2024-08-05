@@ -21,6 +21,8 @@ public class SpartanTabs {
                         pOutput.accept(ProjectSpartanItems.MKVIG1_BODY.get());
                         pOutput.accept(ProjectSpartanItems.MKVG1_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.MKVG1_BODY.get());
+                        pOutput.accept(ProjectSpartanItems.ODST_G1_HELMET.get());
+                        pOutput.accept(ProjectSpartanItems.ODST_G1_BODY.get());
                         pOutput.accept(ProjectSpartanItems.ACHILLES_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.ACHILLES_BODY.get());
                         pOutput.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
@@ -33,6 +35,7 @@ public class SpartanTabs {
                         //pOutput.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
                         pOutput.accept(ProjectSpartanItems.OCEANIC_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.OCEANIC_BODY.get());
+
 
                         //Entity Spawn Eggs
                         //pOutput.accept(ProjectSpartanItems.SPARTAN_SPAWN_EGG.get());

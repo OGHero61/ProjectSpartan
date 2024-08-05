@@ -31,6 +31,7 @@ public class ProjectSpartanItems {
     public  static final RegistryObject<Item> ARGONAUT_BODY = createBody("argonaut_body");
     public  static final RegistryObject<Item> MKVIG1_BODY = createBody("mkvi_g1_body");
     public  static final RegistryObject<Item> MKVG1_BODY = createBody("mkv_g1_body");
+    public  static final RegistryObject<Item> ODST_G1_BODY = createBody("odst_g1_body");
 
 
     private static RegistryObject<Item> createHelmet(String itemName) {
@@ -45,6 +46,7 @@ public class ProjectSpartanItems {
     public  static final RegistryObject<Item> ARGONAUT_HELMET = createHelmet("argonaut_helmet");
     public  static final RegistryObject<Item> MKVIG1_HELMET = createHelmet("mkvi_g1_helmet");
     public  static final RegistryObject<Item> MKVG1_HELMET = createHelmet("mkv_g1_helmet");
+    public  static final RegistryObject<Item> ODST_G1_HELMET = createHelmet("odst_g1_helmet");
 
 
     //Entity Spawn Eggs

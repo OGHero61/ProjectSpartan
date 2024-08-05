@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mcspartan:item/armor/odst_g1_body"
+  }
+}

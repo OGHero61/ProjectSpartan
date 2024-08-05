@@ -15,6 +15,8 @@ import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G
 import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G1_Helmet;
 import net.hero61.projectspartan.client.model.item.model.armor.mkvi_g1.ModelMKVI_G1;
 import net.hero61.projectspartan.client.model.item.model.armor.mkvi_g1.ModelMKVI_G1_Helmet;
+import net.hero61.projectspartan.client.model.item.model.armor.odst.ModelOdstG1;
+import net.hero61.projectspartan.client.model.item.model.armor.odst.ModelOdstG1Helmet;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
@@ -56,6 +58,9 @@ public class SpartanRenderEvents {
 
         event.registerLayerDefinition(ModelOceanic.LAYER_LOCATION, ModelOceanic::createLayer);
         event.registerLayerDefinition(ModelOceanicHelmet.LAYER_LOCATION, ModelOceanicHelmet::createLayer);
+
+        event.registerLayerDefinition(ModelOdstG1.LAYER_LOCATION, ModelOdstG1::createLayer);
+        event.registerLayerDefinition(ModelOdstG1Helmet.LAYER_LOCATION, ModelOdstG1Helmet::createLayer);
 
     }
     @SubscribeEvent
