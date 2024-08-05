@@ -17,14 +17,20 @@ public class SpartanTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ProjectSpartanItems.AIRASSAULT_HELMET.get()))
                     .title(Component.translatable("creativetab.mjolnir_armor_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
-                        pOutput.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
+                        pOutput.accept(ProjectSpartanItems.MKVIG1_HELMET.get());
+                        pOutput.accept(ProjectSpartanItems.MKVIG1_BODY.get());
+                        pOutput.accept(ProjectSpartanItems.MKVG1_HELMET.get());
+                        pOutput.accept(ProjectSpartanItems.MKVG1_BODY.get());
                         pOutput.accept(ProjectSpartanItems.ACHILLES_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.ACHILLES_BODY.get());
+                        pOutput.accept(ProjectSpartanItems.AIRASSAULT_HELMET.get());
+                        pOutput.accept(ProjectSpartanItems.AIRASSAULT_BODY.get());
+                        pOutput.accept(ProjectSpartanItems.ARGONAUT_HELMET.get());
+                        pOutput.accept(ProjectSpartanItems.ARGONAUT_BODY.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
-                        pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());
-                        pOutput.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
+                        //pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());
+                        //pOutput.accept(ProjectSpartanItems.BUCCANEER_BODY_GREEN.get());
                         pOutput.accept(ProjectSpartanItems.OCEANIC_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.OCEANIC_BODY.get());
 

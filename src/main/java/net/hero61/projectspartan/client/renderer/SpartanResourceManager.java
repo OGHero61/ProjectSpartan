@@ -7,8 +7,14 @@ import net.hero61.projectspartan.client.model.item.model.armor.achillies.ModelAc
 import net.hero61.projectspartan.client.model.item.model.armor.achillies.ModelAchillesHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssault;
 import net.hero61.projectspartan.client.model.item.model.armor.airassault.ModelAirAssaultHelmet;
+import net.hero61.projectspartan.client.model.item.model.armor.argonaut.ModelArgonaut;
+import net.hero61.projectspartan.client.model.item.model.armor.argonaut.ModelArgonautHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneerHelmet;
+import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G1;
+import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G1_Helmet;
+import net.hero61.projectspartan.client.model.item.model.armor.mkvi_g1.ModelMKVI_G1;
+import net.hero61.projectspartan.client.model.item.model.armor.mkvi_g1.ModelMKVI_G1_Helmet;
 import net.hero61.projectspartan.item.ProjectSpartanItems;
 import net.hero61.projectspartan.item.armor.SpartanArmorItem;
 import net.minecraft.client.Minecraft;
@@ -34,6 +40,15 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
         setAAssaultHelmetRenderer(modelSet, ProjectSpartanItems.AIRASSAULT_HELMET, "textures/models/armor/airassault/airassault.png");
         setAchillesHelmetRenderer(modelSet, ProjectSpartanItems.ACHILLES_HELMET, "textures/models/armor/achilles/achilles.png");
         setAchillesRenderer(modelSet, ProjectSpartanItems.ACHILLES_BODY, "textures/models/armor/achilles/achilles.png");
+        setArgonautHelmetRenderer(modelSet, ProjectSpartanItems.ARGONAUT_HELMET, "textures/models/armor/argonaut/argonaut.png");
+        setArgonautRenderer(modelSet, ProjectSpartanItems.ARGONAUT_BODY, "textures/models/armor/argonaut/argonaut.png");
+
+        setMKVIG1HelmetRenderer(modelSet, ProjectSpartanItems.MKVIG1_HELMET, "textures/models/armor/mkvi/mkvimjolnir.png");
+        setMKVIG1Renderer(modelSet, ProjectSpartanItems.MKVIG1_BODY, "textures/models/armor/mkvi/mkvimjolnir.png");
+        setMKVG1HelmetRenderer(modelSet, ProjectSpartanItems.MKVG1_HELMET, "textures/models/armor/mkv/mjolnirmkv_green.png");
+        setMKVG1Renderer(modelSet, ProjectSpartanItems.MKVG1_BODY, "textures/models/armor/mkv/mjolnirmkv_green.png");
+
+
         setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY, "textures/models/armor/buccaneer/buccaneer.png");
         setBuccaneerHelmetRenderer(modelSet, ProjectSpartanItems.BUCCANEER_HELMET, "textures/models/armor/buccaneer/buccaneer.png");
         setBuccaneerRenderer(modelSet, ProjectSpartanItems.BUCCANEER_BODY_GREEN, "textures/models/armor/buccaneer/buccaneer_green.png");
@@ -83,6 +98,36 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
     private void setAchillesRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
         ((SpartanArmorItem) item.get())
                 .setArmorModel(new ModelAchilles<>(modelSet.bakeLayer(ModelAchilles.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setArgonautHelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelArgonautHelmet<>(modelSet.bakeLayer(ModelArgonautHelmet.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setArgonautRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelArgonaut<>(modelSet.bakeLayer(ModelArgonaut.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setMKVIG1HelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelMKVI_G1_Helmet<>(modelSet.bakeLayer(ModelMKVI_G1_Helmet.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setMKVIG1Renderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelMKVI_G1<>(modelSet.bakeLayer(ModelMKVI_G1.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setMKVG1HelmetRenderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelMKV_G1_Helmet<>(modelSet.bakeLayer(ModelMKV_G1_Helmet.LAYER_LOCATION)))
+                .setArmorTexture(texture);
+    }
+    private void setMKVG1Renderer(EntityModelSet modelSet, RegistryObject<Item> item, String texture) {
+        ((SpartanArmorItem) item.get())
+                .setArmorModel(new ModelMKV_G1<>(modelSet.bakeLayer(ModelMKV_G1.LAYER_LOCATION)))
                 .setArmorTexture(texture);
     }
 
