@@ -31,6 +31,8 @@ public class SpartanTabs {
                         pOutput.accept(ProjectSpartanItems.ARGONAUT_BODY.get());
                         pOutput.accept(ProjectSpartanItems.ARGUS_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.ARGUS_BODY.get());
+                        pOutput.accept(ProjectSpartanItems.ATLAS_HELMET.get());
+                        pOutput.accept(ProjectSpartanItems.ATLAS_BODY.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET.get());
                         pOutput.accept(ProjectSpartanItems.BUCCANEER_BODY.get());
                         //pOutput.accept(ProjectSpartanItems.BUCCANEER_HELMET_GREEN.get());

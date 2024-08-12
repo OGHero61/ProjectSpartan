@@ -11,6 +11,8 @@ import net.hero61.projectspartan.client.model.item.model.armor.argonaut.ModelArg
 import net.hero61.projectspartan.client.model.item.model.armor.argonaut.ModelArgonautHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.argus.ModelArgus;
 import net.hero61.projectspartan.client.model.item.model.armor.argus.ModelArgusHelmet;
+import net.hero61.projectspartan.client.model.item.model.armor.atlas.ModelAtlas;
+import net.hero61.projectspartan.client.model.item.model.armor.atlas.ModelAtlasHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneerHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G1;
@@ -51,6 +53,9 @@ public class SpartanRenderEvents {
 
         event.registerLayerDefinition(ModelArgus.LAYER_LOCATION, ModelArgus::createLayer);
         event.registerLayerDefinition(ModelArgusHelmet.LAYER_LOCATION, ModelArgusHelmet::createLayer);
+
+        event.registerLayerDefinition(ModelAtlas.LAYER_LOCATION, ModelAtlas::createLayer);
+        event.registerLayerDefinition(ModelAtlasHelmet.LAYER_LOCATION, ModelAtlasHelmet::createLayer);
 
         event.registerLayerDefinition(ModelBuccaneer.LAYER_LOCATION, ModelBuccaneer::createLayer);
         event.registerLayerDefinition(ModelBuccaneerHelmet.LAYER_LOCATION, ModelBuccaneerHelmet::createLayer);

@@ -10,6 +10,8 @@ import net.hero61.projectspartan.client.model.item.model.armor.argonaut.ModelArg
 import net.hero61.projectspartan.client.model.item.model.armor.argonaut.ModelArgonautHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.argus.ModelArgus;
 import net.hero61.projectspartan.client.model.item.model.armor.argus.ModelArgusHelmet;
+import net.hero61.projectspartan.client.model.item.model.armor.atlas.ModelAtlas;
+import net.hero61.projectspartan.client.model.item.model.armor.atlas.ModelAtlasHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneer;
 import net.hero61.projectspartan.client.model.item.model.armor.buccaneer.ModelBuccaneerHelmet;
 import net.hero61.projectspartan.client.model.item.model.armor.mkv_g1.ModelMKV_G1;
@@ -47,6 +49,8 @@ public class SpartanResourceManager extends BlockEntityWithoutLevelRenderer {
         registerArmorModel(modelSet, ProjectSpartanItems.ARGONAUT_HELMET, ModelArgonautHelmet.LAYER_LOCATION, new ModelArgonautHelmet<>(modelSet.bakeLayer(ModelArgonautHelmet.LAYER_LOCATION)), "textures/models/armor/argonaut/argonaut.png");
         registerArmorModel(modelSet, ProjectSpartanItems.ARGUS_BODY, ModelArgus.LAYER_LOCATION, new ModelArgus<>(modelSet.bakeLayer(ModelArgus.LAYER_LOCATION)),"textures/models/armor/argus/argus.png");
         registerArmorModel(modelSet, ProjectSpartanItems.ARGUS_HELMET, ModelArgusHelmet.LAYER_LOCATION, new ModelArgusHelmet<>(modelSet.bakeLayer(ModelArgusHelmet.LAYER_LOCATION)),"textures/models/armor/argus/argus.png");
+        registerArmorModel(modelSet, ProjectSpartanItems.ATLAS_BODY, ModelAtlas.LAYER_LOCATION, new ModelAtlas<>(modelSet.bakeLayer(ModelAtlas.LAYER_LOCATION)), "textures/models/armor/atlas/atlas.png");
+        registerArmorModel(modelSet, ProjectSpartanItems.ATLAS_HELMET, ModelAtlasHelmet.LAYER_LOCATION, new ModelAtlasHelmet<>(modelSet.bakeLayer(ModelAtlasHelmet.LAYER_LOCATION)), "textures/models/armor/atlas/atlas.png");
         registerArmorModel(modelSet, ProjectSpartanItems.MKVIG1_BODY, ModelMKVI_G1.LAYER_LOCATION, new ModelMKVI_G1<>(modelSet.bakeLayer(ModelMKVI_G1.LAYER_LOCATION)), "textures/models/armor/mkvi/mkvimjolnir.png");
         registerArmorModel(modelSet, ProjectSpartanItems.MKVIG1_HELMET, ModelMKVI_G1_Helmet.LAYER_LOCATION, new ModelMKVI_G1_Helmet<>(modelSet.bakeLayer(ModelMKVI_G1_Helmet.LAYER_LOCATION)), "textures/models/armor/mkvi/mkvimjolnir.png");
         registerArmorModel(modelSet, ProjectSpartanItems.MKVG1_BODY, ModelMKV_G1.LAYER_LOCATION, new ModelMKV_G1<>(modelSet.bakeLayer(ModelMKV_G1.LAYER_LOCATION)), "textures/models/armor/mkv/mjolnirmkv_green.png");
